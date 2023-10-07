@@ -8,7 +8,7 @@ import psycopg2
 import streamlit as st
 
 # Setting Webpage Configurations
-st.set_page_config(page_icon="📀",page_title="BisCardX", layout="wide")
+st.set_page_config(page_icon="💻",page_title="BisCardX", layout="wide")
 # Title
 st.title(':red[BisCardX]')
 # Extract information
