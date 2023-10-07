@@ -3,7 +3,7 @@
 ## BisCardX is a Streamlit application that facilitates the extraction of information from images. It utilizes the EasyOCR library to recognize text content in the uploaded images and then extracts relevant details such as names, designations, phone numbers, email addresses, websites, addresses, and pin codes
 
 # Developer Guide
-## 1. Tools Install
+# 1. Tools Install
 * ###   Virtual code
 * ###   Python 3.11.0 or higher.
 * ###   PostgreSQL
@@ -36,9 +36,9 @@
 ### Click the Extract button 
 # Step 3. Create Id and password
 ### Create new user id and new password 
-## Step 2. Data upload
+# Step 4. Data upload
 ### Click the 'Upload into PostgreSQL' button to upload the data into the Postgresql database
-## Step 3. Modification zone
+# Step 5. Modification zone
 ### In this 'Modification zone' you can able to view or update the information also you can able to delete the data
 
 
