@@ -9,7 +9,7 @@
 ###   PostgreSQL
 
 ## 2. Requirement Libraries to Install
-### * pip install pandas easyocr numpy Pillow opencv-python-headless os re  postgresql-connector-python streamlit:
+* ###  pip install pandas easyocr numpy Pillow opencv-python-headless os re  postgresql-connector-python streamlit:
 
 ### 1.import easyocr
 ### 2.import re
