@@ -8,7 +8,7 @@ import psycopg2
 import streamlit as st
 
 # Setting Webpage Configurations
-st.set_page_config(page_icon="💻",page_title="BisCardX", layout="wide")
+st.set_page_config(page_icon="💻",page_title="BisCardX✔️", layout="wide")
 # Title
 st.title(':red[BisCardX]')
 # Extract information
@@ -67,7 +67,7 @@ def extract(upload):
     return names,designations,'|'.join(phone_list),mail_ids,websites,addresss,pincodes
 
 
-tab1,tab2,tab3 = st.tabs(['Upload | Extract','Insert into postgreSQL Database','View | Update | Delete'])
+tab1,tab2,tab3 = st.tabs([':orange[UPLOAD | EXTRACT]',':blue[UPLOAD EXTRACTED DATA INTO POSTGRESQL]',':violet[VIEW | UPDATE | DELETE]' ])
 # Upload | Extract
 with tab1:
     # Uploader
@@ -110,7 +110,9 @@ with tab1:
             st.subheader(f':red[Website] : {website}')
             st.subheader(f':red[Address] : {address}')
             st.subheader(f':red[Pincode] : {pincode}')
-            st.success('Data Extracted Successfully')
+            st.success("Data Extracted Successfully !!",icon="✅")
+            st.balloons()
+
 # Insert into MySql Database
 with tab2:
     try:
@@ -138,7 +140,9 @@ with tab2:
                 values = (id,name,designation,phone_no,email_id,website,address,pincode,password)
                 mycursor.execute(query,values)
                 sql.commit()
-                st.success('Data Uploaded Successfully')
+                st.success("Data upload Successfully !!",icon="✅")
+                st.balloons()
+
     
 # View | Update | Delete    
 with tab3:
@@ -158,7 +162,8 @@ with tab3:
                 st.image(resized_image)
                 df = pd.DataFrame(row_data,columns = ["name","designation","phone_no","website","mail_id","address","pincode"],index=range(1, len(row_data) + 1))
                 st.dataframe(df) 
-                st.success('Data fetched Succesfully')
+                st.success("Data fetched Succesfully",icon="✅")
+                st.balloons()
 
     st.subheader(':red[Update your details]')
 
@@ -172,7 +177,7 @@ with tab3:
             values = (name,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'designation':
         designation = st.text_input('Enter your designation')
@@ -182,7 +187,7 @@ with tab3:
             values = (designation,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'phone_no':
         phone_no = st.text_input('Enter your phone_no')
@@ -192,7 +197,7 @@ with tab3:
             values = (phone_no,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'website':
         website = st.text_input('Enter your phone_no')
@@ -202,7 +207,7 @@ with tab3:
             values = (website,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'mail_id':
         mail_id = st.text_input('Enter your mail_id')
@@ -212,7 +217,7 @@ with tab3:
             values = (mail_id,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'address':
         address = st.text_input('Enter your address')
@@ -222,7 +227,7 @@ with tab3:
             values = (address,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     elif select_options == 'pincode':
         pincode = st.text_input('Enter your pincode')
@@ -232,7 +237,7 @@ with tab3:
             values = (pincode,your_id,your_password)
             mycursor.execute(update_query,values)
             sql.commit()
-            st.success('Data Updated Successfully')
+            st.success('Data Updated Successfully',icon="✅")
 
     st.subheader(':red[Delete your details]')
     delete_id = st.text_input('Enter your id')
@@ -243,4 +248,4 @@ with tab3:
             values = (delete_id,)
             mycursor.execute(delete_query,values)
             sql.commit()
-            st.success('Data deleted Successfully')
+            st.success('Data deleted Successfully',icon="✅")
