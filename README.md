@@ -4,9 +4,9 @@
 
 # Developer Guide
 ## 1. Tools Install
-###   Virtual code.
-###   Python 3.11.0 or higher.
-###   PostgreSQL
+* ###   Virtual code
+* ###   Python 3.11.0 or higher.
+* ###   PostgreSQL
 
 ## 2. Requirement Libraries to Install
 * ###  pip install pandas easyocr numpy Pillow opencv-python-headless os re  postgresql-connector-python streamlit:
