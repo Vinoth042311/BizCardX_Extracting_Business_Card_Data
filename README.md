@@ -11,13 +11,13 @@
 ## 2. Requirement Libraries to Install
 * ###  pip install pandas easyocr numpy Pillow opencv-python-headless os re  postgresql-connector-python streamlit:
 
-### 1.import easyocr
-### 2.import re
-### 3.from PIL import Image
-### 4.import numpy as np
-### 5.import pandas as pd
-### 6.import time
-### 7.import psycopg2
-### 8.import streamlit as st
+* ### 3. Import Libraries
+* ### import easyocr
+* ### import re
+* ### from PIL import Image
+* ### import numpy as np
+* ### import pandas as pd
+* ### import time
+* ### import psycopg2
+* ### import streamlit as st
 
-### frdfcvv
